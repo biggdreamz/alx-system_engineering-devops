@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -m | tr -d '\n'
+ls -1Ap --group-directories-first
