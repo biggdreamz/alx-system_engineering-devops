@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -c1 filename | tr -d '\n'; echo
+cut -c 1 | paste -s -d ""
