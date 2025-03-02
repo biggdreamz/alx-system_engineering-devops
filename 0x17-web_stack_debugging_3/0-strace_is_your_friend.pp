@@ -1,10 +1,6 @@
-# A puppet manuscript to replace a line in a file on a server
-
-$file_to_edit = '/var/www/html/wp-settings.php'
-
-#replace line containing "phpp" with "php"
-
-exec { 'replace_line':
-  command => "sed -i 's/phpp/php/g' ${file_to_edit}",
-  path    => ['/bin','/usr/bin']
+# Replacing right php config files to load php
+exec {'replacing_right path':
+  command => 'sed -i "s/.phpp/.php/g"  /var/www/html/wp-settings.php',
+  path    => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+  onlyif  => 'test -f /var/www/html/wp-settings.php'
 }
