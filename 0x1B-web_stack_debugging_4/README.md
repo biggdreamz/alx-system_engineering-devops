@@ -1,3 +1,1 @@
-# Webstack Debugging
-
-Testing how well the webserver setup is working and fixing huge amounts of failed requests
+# Solutions to tasks on 0x1B. Web stack debugging #4
